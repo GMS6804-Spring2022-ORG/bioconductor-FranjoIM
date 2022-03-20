@@ -12,4 +12,6 @@ RUN R -e 'BiocManager::install(ask = F)' && R -e 'BiocManager::install(c("magick
 RUN apt-get install -y  \
 asciinema 
 
+### Install additional Bioconductor package
+RUN R -e 'BiocManager::install(ask = F)' && R -e 'BiocManager::install("GENESIS")'
 
